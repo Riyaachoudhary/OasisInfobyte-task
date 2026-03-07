@@ -1,0 +1,98 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#e0c3fc,#8ec5fc);
+}
+
+/* Calculator Box */
+
+.calculator{
+    padding: 20px;
+    border-radius: 20px;
+    background: #000001;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.6);
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Display */
+
+input{
+    width: 240px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    font-size: 32px;
+    text-align: right;
+    cursor: pointer;
+    color: #6ee4d5;
+}
+
+input::placeholder{
+    color: #f5f5f5;
+}
+
+/* Button container */
+
+.calculator-btn-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button rows */
+
+.calculator-btn-rows{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Buttons */
+
+button{
+    width: 50px;
+    height: 45px;
+    margin: 10px;
+    border-radius: 14px;
+    background:#2d2f38 ;
+    color: #f5f5f5;
+    font-size: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: none;
+}
+
+/* Hover animation */
+
+button:hover{
+    background-color: #34363f;
+    transform: scale(1.1);
+}
+
+/* Click effect */
+
+button:active{
+    transform: scale(0.95);
+}
+
+/* Operator buttons */
+
+.operator{
+    color: #6ee4d5;
+    font-weight: 600;
+}
