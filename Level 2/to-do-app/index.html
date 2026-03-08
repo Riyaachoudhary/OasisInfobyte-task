@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Attractive To-Do List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>✨ To-Do List<button class="themeBtn" onclick="toggleTheme()">🌙</button></h1>
+    <div class="input-section">
+        <div class="task-row">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button onclick="addTask()">Add</button>
+        </div>
+        
+        <div class="date-time">
+            <input type="date" id="taskDate">
+            <input type="time" id="taskTime">
+        </div>
+    </div>
+    
+    
+    <div class="filters">
+        <button onclick="filterTasks('all', event)" class="active">All</button>
+        <button onclick="filterTasks('active', event)">Active</button>
+        <button onclick="filterTasks('completed', event)">Completed</button>
+
+    </div>
+
+    <p id="statusText">Showing: All Tasks</p>
+    <ul id="taskList"></ul>
+    
+  </div>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
+
