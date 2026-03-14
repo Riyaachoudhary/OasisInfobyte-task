@@ -1,0 +1,157 @@
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+.auth-page{
+background: linear-gradient(to right,#ff8c00,#ff5f1f);
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.container{
+background:#fff;
+border-radius:30px;
+box-shadow:0 5px 15px rgba(0,0,0,0.35);
+position:relative;
+overflow:hidden;
+width:768px;
+max-width:100%;
+min-height:480px;
+}
+
+.form-container{
+position:absolute;
+top:0;
+height:100%;
+transition:all 0.6s ease-in-out;
+}
+
+.sign-in{
+left:0;
+width:50%;
+z-index:2;
+}
+
+.sign-up{
+left:0;
+width:50%;
+opacity:0;
+z-index:1;
+}
+
+form{
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+padding:0 40px;
+height:100%;
+}
+
+input{
+background:#eee;
+border:none;
+margin:8px 0;
+padding:10px 15px;
+border-radius:8px;
+width:100%;
+outline:none;
+}
+
+button{
+background:#ff5f1f;
+color:white;
+padding:10px 45px;
+border:none;
+border-radius:8px;
+margin-top:10px;
+cursor:pointer;
+}
+
+.toggle-container{
+position:absolute;
+top:0;
+left:50%;
+width:50%;
+height:100%;
+overflow:hidden;
+transition:all 0.6s ease-in-out;
+border-radius:150px 0 0 100px;
+z-index:1000;
+}
+
+.toggle{
+background:linear-gradient(to right,#ff8c00,#ff5f1f);
+color:white;
+position:relative;
+left:-100%;
+height:100%;
+width:200%;
+transition:all 0.6s ease-in-out;
+}
+
+.toggle-panel{
+position:absolute;
+width:50%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+padding:0 30px;
+}
+
+.toggle-right{
+right:0;
+}
+
+.toggle-left{
+transform:translateX(-200%);
+}
+
+.toggle-panel label{
+border:1px solid white;
+padding:10px 45px;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
+}
+
+.toggle-checkbox{
+display:none;
+}
+
+.toggle-checkbox:checked ~ .toggle-container{
+transform:translateX(-100%);
+border-radius:0 150px 100px 0;
+}
+
+.toggle-checkbox:checked ~ .toggle-container .toggle{
+transform:translateX(50%);
+}
+
+.toggle-checkbox:checked ~ .toggle-container .toggle-right{
+transform:translateX(200%);
+}
+
+.toggle-checkbox:checked ~ .toggle-container .toggle-left{
+transform:translateX(0);
+}
+
+.toggle-checkbox:checked ~ .sign-up{
+opacity:1;
+z-index:5;
+transform:translateX(100%);
+}
+
+.toggle-checkbox:checked ~ .sign-in{
+opacity:0;
+transform:translateX(100%);
+}
